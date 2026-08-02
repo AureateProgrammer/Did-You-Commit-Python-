@@ -1,9 +1,10 @@
-import subprocess
 import requests
+from datetime import date
 
-response = requests.get(url=10)
-username ="AureateProgrammer"#creating a variable for my username
-url = f"https://api.github.com/users/{username}/events/public"#this line is building the adress connecting,
+username = "AureateProgrammer"
+url = f"https://api.github.com/users/{username}/events/public"
 
-request.get (url)
+response = requests.get(url)
+events = response.json()
 
+print(events[0])
